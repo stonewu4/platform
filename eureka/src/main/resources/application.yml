@@ -1,0 +1,15 @@
+server:
+  port: 4950
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false  #当前项目不注册服务
+    fetchRegistry: false  #当前项目不需要发现服务
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  security:
+    user:
+      name: stone
+      password: WUlei1234.
